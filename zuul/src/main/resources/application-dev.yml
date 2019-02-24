@@ -1,0 +1,46 @@
+server:
+  port: 9011
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9001/eureka/
+  instance:
+    ip-address: true
+    instance-id: zuul
+
+zuul:
+  routes:
+    api:
+      urlPrefix: /client
+      path: /client/**
+      serviceId: client
+      custom-sensitive-headers: true
+  sensitive-headers: Authorization
+  ignored-services: '*'
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+# 鉴权设置
+token:
+  name: Authorization
+  prefix:
+    basic: Basic
+    bearer: Bearer
+
+# feign
+feign:
+  hystrix:
+    enabled: true

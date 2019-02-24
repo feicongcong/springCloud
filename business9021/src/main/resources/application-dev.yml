@@ -1,0 +1,15 @@
+server:
+  port: 9021
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9001/eureka/
+  instance:
+      ip-address: true
+      instance-id: business9021
+
+feign:
+  hystrix:
+    enabled: true
+
