@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fcc.SpringCloud.SpringCloudAll</groupId>
-    <artifactId>business9021</artifactId>
+    <artifactId>business9024</artifactId>
 
     <dependencies>
         <!-- spring boot start -->
@@ -28,15 +28,19 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
+        <!--</dependency>-->
         <!-- spring cloud end -->
         <!-- 日志 start -->
-        <dependency>
-            <groupId>net.logstash.logback</groupId>
-            <artifactId>logstash-logback-encoder</artifactId>
-            <version>4.11</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>net.logstash.logback</groupId>-->
+        <!--<artifactId>logstash-logback-encoder</artifactId>-->
+        <!--<version>4.11</version>-->
+        <!--</dependency>-->
         <!-- 日志 end -->
         <!-- microservice 基础依赖 start -->
         <dependency>
@@ -58,5 +62,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -6,10 +6,10 @@ eureka:
     serviceUrl:
       defaultZone: http://127.0.0.1:9001/eureka/
   instance:
-      ip-address: true
+      ip-address: true #访问路径显示ip地址
       instance-id: client
 
-# feign
+#开启Feign Hystrix 支持
 feign:
   hystrix:
     enabled: true

@@ -6,22 +6,17 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @Description:
- * @Author: CC.F
- * @Date: 0:05 2019/2/25
- */
 @Slf4j
 @RestController
 public class BusinessRestImpl implements BusinessFeign {
     @Override
     @HystrixCommand(fallbackMethod = "businessTestHystrix")
     public ResultDto<String> businessTest() {
-        ResultDto<String> resultDto=ResultDto.build();
+        ResultDto<String> resultDto = ResultDto.build();
 //        if(true) {
 //            throw new RuntimeException("businessTestHystrix");
 //        }
-        return resultDto.setResult("business9021");
+        return resultDto.setResult("business9023");
     }
 
     public ResultDto<String> businessTestHystrix() {

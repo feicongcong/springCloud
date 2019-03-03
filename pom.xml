@@ -16,7 +16,8 @@
         <module>feign</module>
         <module>client</module>
         <module>business9021</module>
-        <module>business9022</module>
+        <module>business9023</module>
+        <module>business9024</module>
     </modules>
 
     <parent>
@@ -35,6 +36,26 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>1.5.15.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-eureka-server</artifactId>
+                <version>1.4.5.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <version>1.4.5.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-hystrix</artifactId>
+                <version>1.4.5.RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -43,6 +64,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.16.22</version>
         </dependency>
         <!-- lombok end -->
     </dependencies>

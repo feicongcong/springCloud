@@ -10,8 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fcc.SpringCloud.SpringCloudAll</groupId>
-    <artifactId>eureka9001</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>business9023</artifactId>
 
     <dependencies>
         <!-- spring boot start -->
@@ -19,11 +18,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <!-- spring boot end -->
+
         <!-- spring cloud start -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
         <!--<dependency>-->
         <!--<groupId>org.springframework.cloud</groupId>-->
@@ -37,7 +42,17 @@
         <!--<version>4.11</version>-->
         <!--</dependency>-->
         <!-- 日志 end -->
+        <!-- microservice 基础依赖 start -->
+        <dependency>
+            <groupId>com.fcc.SpringCloud.SpringCloudAll</groupId>
+            <artifactId>feign</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- microservice 基础依赖 end -->
+
+
     </dependencies>
+
 
     <build>
         <plugins>
@@ -47,5 +62,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

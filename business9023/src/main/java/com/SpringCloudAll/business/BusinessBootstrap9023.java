@@ -4,6 +4,7 @@ import com.SpringCloudAll.feign.common.config.JsonConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
@@ -26,10 +27,12 @@ import org.springframework.scheduling.annotation.EnableAsync;
 })
 @EnableAsync
 @SpringBootApplication
-public class BusinessBootstrap {
+//对Hystrix熔断机制的支持
+@EnableCircuitBreaker
+public class BusinessBootstrap9023 {
 
     public static void main(String[] args) {
-        SpringApplication.run(BusinessBootstrap.class, args);
+        SpringApplication.run(BusinessBootstrap9023.class, args);
     }
 
 }

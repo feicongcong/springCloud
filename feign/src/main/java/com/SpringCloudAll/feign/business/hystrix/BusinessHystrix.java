@@ -21,7 +21,7 @@ public class BusinessHystrix implements BusinessFeign {
      */
     @Override
     public ResultDto businessTest() {
-        log.error("businessTest异常回退");
+        log.error("businessTest客户端回退");
         return ResultDto.build(ErrorMessageCode.ERROR_SERVER);
     }
 
