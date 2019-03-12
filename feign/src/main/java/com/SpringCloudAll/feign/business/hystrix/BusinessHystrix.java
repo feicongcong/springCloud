@@ -1,5 +1,6 @@
 package com.SpringCloudAll.feign.business.hystrix;
 
+import com.SpringCloudAll.feign.business.dto.TestDto;
 import com.SpringCloudAll.feign.business.feign.BusinessFeign;
 import com.SpringCloudAll.feign.common.constant.ErrorMessageCode;
 import com.SpringCloudAll.feign.common.pojo.ResultDto;
@@ -23,6 +24,11 @@ public class BusinessHystrix implements BusinessFeign {
     public ResultDto businessTest() {
         log.error("businessTest客户端回退");
         return ResultDto.build(ErrorMessageCode.ERROR_SERVER);
+    }
+
+    @Override
+    public void performanceTest(TestDto testDto) {
+        log.error("performanceTest客户端回退");
     }
 
 

@@ -1,5 +1,6 @@
 package com.SpringCloudAll.business.restImpl;
 
+import com.SpringCloudAll.feign.business.dto.TestDto;
 import com.SpringCloudAll.feign.business.feign.BusinessFeign;
 import com.SpringCloudAll.feign.common.pojo.ResultDto;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
@@ -17,6 +18,11 @@ public class BusinessRestImpl implements BusinessFeign {
 //            throw new RuntimeException("businessTestHystrix");
 //        }
         return resultDto.setResult("business9023");
+    }
+
+    @Override
+    public void performanceTest(TestDto testDto) {
+
     }
 
     public ResultDto<String> businessTestHystrix() {
